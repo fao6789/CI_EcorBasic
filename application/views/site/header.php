@@ -1,66 +1,54 @@
-              <meta http-equiv="Content-Type" content="text/html ;charset=utf-8">
-        <!-- the CSS -->
-        <link type="text/css" href="<?php echo public_url()?>/site/css/reset.css" rel="stylesheet">
-        <link type="text/css" href="<?php echo public_url()?>/site/css/style.css" rel="stylesheet">
-        <link type="text/css" href="<<?php echo public_url()?>/site/css/menu.css" rel="stylesheet">
-        <link type="text/css" href="<?php echo public_url()?>/site/css/input.css" rel="stylesheet">
-        <link type="text/css" href="<?php echo public_url()?>/site/css/product.css" rel="stylesheet">
-        <link type="text/css" href="<?php echo public_url()?>/site/css/slide-flim.css" rel="stylesheet">
-        <!-- End CSS -->
-        
-        <!-- the Javascript -->
-    
-        <!-- <script src="//e.dtscout.com/e/?v=1a&amp;pid=5200&amp;site=1&amp;l=file%3A%2F%2F%2FC%3A%2FUsers%2FRoot%2FDesktop%2F%5Bfreetuts_net%5D_shopping_part_3.rar%2Ftemplate%2Fsite%2Findex.html&amp;j=" async="" type="text/javascript"></script> -->
-        <script type="text/javascript" src="<?php echo public_url()?>/js/jquery/jquery.min.js"></script>
-		<script type="text/javascript" src="<?php echo public_url()?>/js/jquery/jquery-ui.min.js"></script>
-		<link rel="stylesheet" href="<?php echo public_url()?>/js/jquery/jquery-ui/custom-theme/jquery-ui-1.8.21.custom.css" type="text/css">
-	    
-        <script src="<?php echo public_url()?>/site/js/script.js"></script>
-        
-        <!-- raty -->
-		 <script type="text/javascript" src="raty/jquery.raty.min.js"></script>
-		 <script type="text/javascript">
-	      $(function() {
-	         $.fn.raty.defaults.path = 'raty/img';
-	         $('.raty').raty({
-	          	  score: function() {
-	          	    return $(this).attr('data-score');
-	          	  },
-	              readOnly  : true,
-	          });
-	      });
-	     </script>
-	     <style>.raty img{width:16px !important;height:16px; !important;}</style>
-	     <!--End raty -->
-     
-        <!-- End Javascript -->
-        <script type="text/javascript">
-	        $(document).ready(function(){
-		        $('#back_to_top').click(function() {
-		            $('html, body').animate({scrollTop:0},"slow");
-		       });
-		       // go top
-		       $(window).scroll(function() {
-		            if($(window).scrollTop() != 0) {
-		                $('#back_to_top').fadeIn();
-		            } else {
-		                $('#back_to_top').fadeOut();
-		            }
-		       });
-	        });
-		</script>
-		<style>
-		#back_to_top {
-		    bottom: 10px;
-		    color: #666;
-		    cursor: pointer;
-		    padding: 5px;
-		    position: fixed;
-		    right: 55px;
-		    text-align: center;
-		    text-decoration: none;
-		    width: auto;
-		}
-		</style>
-		
-		        <title>Học lập trình website với PHP và MYSQL</title>  
+
+	           <!-- The box-header-->
+			        
+<link type="text/css" href="<?php echo public_url()?>/js/jquery/autocomplete/css/smoothness/jquery-ui-1.8.16.custom.css" rel="stylesheet">	
+<script type="text/javascript" src="<?php echo public_url()?>/js/jquery/autocomplete/jquery-ui-1.8.16.custom.min.js"></script>
+
+<script type="text/javascript">
+$(function() {
+    $( "#text-search" ).autocomplete({
+        source: "product/search_ac.html",
+    });
+});
+</script>
+<div class="top"><!-- The top -->
+      <div id="logo"><!-- the logo -->
+           <a href="" title="Học lập trình website với PHP và MYSQL">
+	           <img src="<?php echo public_url()?>/site/images/logo.jpg" alt="Học lập trình website với PHP và MYSQL">
+	       </a>
+       </div><!-- End logo -->
+       
+       <!--  load gio hàng -->
+      <div id="cart_expand" class="cart"> 
+            <a href="gio-hang.html" class="cart_link">
+               Giỏ hàng <span id="in_cart">0</span> sản phẩm
+            </a> 
+            <img alt="cart bnc" src="<?php echo public_url()?>/site/images/cart.png"> 
+</div>       
+       <div id="search"><!-- the search -->
+			<form method="get" action="tim-kiem.html">
+			     				 <input type="text" id="text-search" name="key-search" value="" placeholder="Tìm kiếm sản phẩm..." class="ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+				 <input type="submit" id="but" name="but" value="">
+			</form>
+       </div><!-- End search -->
+       
+              
+    <div class="clear"></div><!-- clear float --> 
+</div><!-- End top -->			   <!-- End box-header  -->
+               
+               <!-- The box-header-->
+			        <div id="menu"><!-- the menu -->
+           <ul class="menu_top">
+                <li class="active index-li"><a href="">Trang chủ </a></li>
+                <li class=""><a href="info/view/1.html">Giới thiệu</a></li>
+                <li class=""><a href="info/view/2.html">Hướng dẫn</a></li>
+                <li class=""><a href="san-pham.html">Sản phẩm</a></li>
+                <li class=""><a href="tin-tuc.html">Tin tức</a></li>
+                <li class=""><a href="video.html">Video</a></li>
+                <li class=""><a href="lien-he.html">Liên hệ</a></li>
+                                <li class=""><a href="dang-ky.html">Đăng ký</a></li>
+                <li class=""><a href="dang-nhap.html">Đăng nhập</a></li>
+                           </ul>
+</div><!-- End menu -->			   <!-- End box-header  -->
+		       
+		 
