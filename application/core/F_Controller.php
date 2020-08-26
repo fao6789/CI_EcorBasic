@@ -1,6 +1,9 @@
 <?php
 Class F_Controller extends CI_Controller 
 {
+    //biến gửi dữ liệu sang vỉew
+    public $data = array();
+    
     function __construct()
     {
         // ke thua tu CI_constroller
