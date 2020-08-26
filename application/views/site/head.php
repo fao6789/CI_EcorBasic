@@ -18,10 +18,10 @@
         <script src="<?php echo public_url()?>/site/js/script.js"></script>
         
         <!-- raty -->
-		 <script type="text/javascript" src="raty/jquery.raty.min.js"></script>
+		 <script type="text/javascript" src="<?php echo public_url()?>/site/raty/jquery.raty.min.js"></script>
 		 <script type="text/javascript">
 	      $(function() {
-	         $.fn.raty.defaults.path = 'raty/img';
+	         $.fn.raty.defaults.path = '<?php echo public_url()?>/site/raty/img';
 	         $('.raty').raty({
 	          	  score: function() {
 	          	    return $(this).attr('data-score');
