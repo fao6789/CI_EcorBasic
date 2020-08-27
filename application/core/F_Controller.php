@@ -12,7 +12,8 @@ Class F_Controller extends CI_Controller
         $controller = $this->uri->segment(1);
         switch ($controller){
             case 'admin':{
-                // xử lý trong admin
+                // xử lý các dữ liệu khi truy cập vào trang admin
+                $this->load->helper('admin');
             break;
             }
             default :{

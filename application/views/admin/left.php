@@ -15,7 +15,7 @@
 
 				<li class="home">
 
-					<a href="admin/home.html" class="active" id="current">
+					<a href="<?php echo admin_url()?>" class="active" id="current">
 						<span>Bảng điều khiển</span>
 						<strong></strong>
 					</a>
@@ -73,7 +73,7 @@
 
 					<ul class="sub">
 						<li>
-							<a href="admin/admin.html">
+							<a href="<?php echo admin_url('admin')?>">
 								Ban quản trị </a>
 						</li>
 						<li>
