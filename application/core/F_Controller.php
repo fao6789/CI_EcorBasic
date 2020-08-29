@@ -14,6 +14,7 @@ Class F_Controller extends CI_Controller
             case 'admin':{
                 // xử lý các dữ liệu khi truy cập vào trang admin
                 $this->load->helper('admin');
+                $this->_check_login();
             break;
             }
             default :{
@@ -22,6 +23,19 @@ Class F_Controller extends CI_Controller
         }
     }
     /**
-     * kiểm  tra trang thái đang nhập
+     * kiểm  tra trang thái đăng nhập
      */
+    private function _check_login(){
+        $controller = $this->uri->rsegment('1');
+        $controller= strtolower($controller);
+        // nếu chưa đăng nhập mà truy cập 1 controller  khác login
+        $login= $this->session->userdata('login');
+        if(!$login && $controller!='login'){
+            redirect(admin_url('login'));
+        }
+         // nếu đã đăng nhập thì ko vào login
+        if($login && $controller =='login'){
+            redirect(admin_url('home'));
+        }
+    }
 }

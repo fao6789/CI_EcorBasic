@@ -1,5 +1,5 @@
  <?php $this->load->view('admin/admin/head', $this->data)?>
- <div class="line"></div>
+
 
  <div class="wrapper">
  	<div class="widget">

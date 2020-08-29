@@ -151,5 +151,15 @@ Class Admin extends F_Controller {
            // chuyển tới trang danh sách quản trị viên
                     redirect(admin_url('admin'));
      }
+     /**
+      * Đăng xuất
+      */
+
+     function logout(){
+         if($this->session->userdata('login')){
+             $this->session->unset_userdata('login');
+             redirect(admin_url('login'));
+         }
+     }
    
 }
